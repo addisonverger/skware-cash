@@ -25,8 +25,8 @@ function renderTransactions(transactions) {
 
 //*******************************************************
 //   Displays the full transaction list on page load
-//   Listens for keyboard input to filter the list of 
-//   transactions based on the search string. 
+//   Listens for keyboard input to filter the list of
+//   transactions based on the search string.
 //*******************************************************
 document.addEventListener("DOMContentLoaded", function () {
 	document.getElementById('transactions').innerHTML = renderTransactions(fullTransactionData);
