@@ -6,13 +6,13 @@
 function renderTransactions(transactions) {
 	var finalHTML = '<div class="buffer">TRANSACTIONS</div>';
 
-	var transactionsHTML = transactions.map(function () {
+	var transactionsHTML = transactions.map(function (transactions) {
 		var transactionHTML = `
 		<div class="transaction">
-			<div class="name">${transaction.name}</div>
-			<div class="for">${transaction.for}</div>
-			<div class="date">${transaction.date}</div>
-			<div class="amount">${transaction.amount}</div>
+			<div class="name">${transactions.name}</div>
+			<div class="for">${transactions.for}</div>
+			<div class="date">${transactions.date}</div>
+			<div class="amount">${transactions.amount}</div>
 		</div>
 		`
 		return transactionHTML;
@@ -25,8 +25,8 @@ function renderTransactions(transactions) {
 
 //*******************************************************
 //   Displays the full transaction list on page load
-//   Listens for keyboard input to filter the list of 
-//   transactions based on the search string. 
+//   Listens for keyboard input to filter the list of
+//   transactions based on the search string.
 //*******************************************************
 document.addEventListener("DOMContentLoaded", function () {
 	document.getElementById('transactions').innerHTML = renderTransactions(fullTransactionData);
